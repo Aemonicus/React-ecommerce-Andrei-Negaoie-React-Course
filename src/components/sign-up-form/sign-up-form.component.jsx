@@ -1,4 +1,4 @@
-import { useState } from "react"
+import {  useState } from "react"
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils"
 import ButtonComponent from "../button/button.component"
 import FormInput from "../form-input/form-input.component"
@@ -31,7 +31,7 @@ export const SignUpForm = () => {
 
     try {
       const {user} = await createAuthUserWithEmailAndPassword(email, password)
-
+      
       await createUserDocumentFromAuth(user, {displayName})
       resetFormFields()
     } catch (error) {

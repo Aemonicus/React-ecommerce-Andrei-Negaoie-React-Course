@@ -3,9 +3,8 @@ import { Navigation } from "./routes/navigation/navigation.component";
 
 import { Routes, Route } from "react-router-dom"
 import Authentication from "./routes/authentication/authentication.component";
+import Shop from "./routes/shop/shop.component";
 
-
-const Shop = () => <h1>SHOP PAGE</h1>
 
 
 const App = () => {

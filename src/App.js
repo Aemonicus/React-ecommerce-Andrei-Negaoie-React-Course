@@ -15,7 +15,8 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         {/* index veut dire que "/" servira d url pour la route, donc c'est comme si on disait que home avait comme path="/" */}
         <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="shop/*" element={<Shop />} />
+        {/* la wild card * indique "regarde dans le component Shop les éléments à afficher dans les routes enfant", il va trouver "index" qui sera le composant rendu par défaut pour le composant Shop */}
         {/* /shop */}
         <Route path="auth" element={<Authentication />} />
         {/* /auth */}

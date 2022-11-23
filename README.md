@@ -1,3 +1,7 @@
+# If Deploy with NETLIFY
+
+In public folder, a "\_redirects" file was created to allow netlify to give us back a page for redirect user command/refresh page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

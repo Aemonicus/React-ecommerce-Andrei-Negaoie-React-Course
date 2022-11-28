@@ -18,11 +18,9 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
-
-      setCurrentUser(user);
+      dispatch(setCurrentUser(user));
     });
 
-    // cleanup function
     return unsubscribe;
   }, []);
 

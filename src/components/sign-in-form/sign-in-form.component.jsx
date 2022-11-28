@@ -1,11 +1,10 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
 import {
-  createUserDocumentFromAuth,
-  signInWithGooglePopup,
-  signInAuthUserWithEmailAndPassword,
-} from "../../utils/firebase/firebase.utils";
+  emailSignInStart,
+  googleSignInStart,
+} from "../../store/user/user.action";
 
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
@@ -24,6 +23,8 @@ export const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
   const { email, password } = formFields;
 
   const resetFormFields = () => {
@@ -34,10 +35,7 @@ export const SignInForm = () => {
     e.preventDefault();
 
     try {
-      const { user } = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+      dispatch(emailSignInStart(email, password));
       resetFormFields();
       navigate("/");
     } catch (error) {
@@ -61,7 +59,7 @@ export const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
+    dispatch(googleSignInStart());
     navigate("/");
   };
 

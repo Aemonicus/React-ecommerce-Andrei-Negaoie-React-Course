@@ -18,7 +18,7 @@ import {
 } from "./navigation.styles";
 import { signOutStart } from "../../store/user/user.action";
 
-export const Navigation = () => {
+export default function Navigation() {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
   const dispatch = useDispatch();
@@ -53,4 +53,4 @@ export const Navigation = () => {
       <Outlet />
     </>
   );
-};
+}

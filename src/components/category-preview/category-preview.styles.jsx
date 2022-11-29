@@ -12,10 +12,17 @@ export const Title = styled(Link)`
   font-size: 28px;
   margin-bottom: 25px;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 `;
 
 export const Preview = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4rem;
+  }
 `;

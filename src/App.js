@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Spinner } from './components/spinner/spinner.component';
 import { checkUserSession } from './store/user/user.action';
 
-
+import { GlobalStyle } from './global.styles';
 
 // lazy avec suspense nous permet de mettre en place de l'import dynamique. Ce qui veut dire importer uniquement les éléments du Home component quand on est sur la page Home, etc..
 
@@ -30,6 +30,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<Spinner />}>
+      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Navigation />}>
           {/* index veut dire que "/" servira d url pour la route, donc c'est comme si on disait que home avait comme path="/" */}

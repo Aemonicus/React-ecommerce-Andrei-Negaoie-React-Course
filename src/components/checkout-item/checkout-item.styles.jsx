@@ -21,6 +21,10 @@ export const ImageContainer = styled.div`
 
 export const BaseSpan = styled.span`
   width: 23%;
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const Quantity = styled(BaseSpan)`

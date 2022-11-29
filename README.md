@@ -1,6 +1,12 @@
-# If Deploy with NETLIFY
+# E-Commerce project using FIREBASE and NETLIFY with serverless function for STRIPE payment
 
 In public folder, a "\_redirects" file was created to allow netlify to give us back a page for redirect user command/refresh page
+
+To see the steps to use netlify hosting, go Andreai React Udemy course video 142-143
+
+To see the steps to use netlify serverless function (netlify cli commands..), go Andreai React Udemy course video 186
+
+---
 
 # Getting Started with Create React App
 

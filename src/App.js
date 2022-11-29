@@ -30,7 +30,7 @@ const App = () => {
         <Route path="checkout" element={<Checkout />} />
       </Route>
     </Routes>
-  );
+  )
 }
 
 export default App;
